@@ -4,7 +4,11 @@ class Hash
  
   def keys_of(args)
     result = []
-    self.each{|k,v|result << k if v == args}
+    self.each do |k,v|
+      
+       if v == args
+        result << k
+    end
     result
   end
 end
