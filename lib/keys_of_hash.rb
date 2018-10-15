@@ -5,9 +5,7 @@ class Hash
   def keys_of(*args)
     result = []
     self.each do |k,v|
-      if args.count > 1
-        args.each{|el| result << k  if v == el}
-       elsif v == args
+      if args.include?(v) 
         result << k
       end
     end
